@@ -1,71 +1,81 @@
-/*reset de formatação*/
-html{box-sizing: border-box;}
-*, *:before, *:after{box-sizing: inherit;}
- 
-body{
-   background-color: #000;
-   color: rgb(252, 193, 221);
-   padding: 0;
-   margin: 0;
-}
-h1{   text-align: center; }
-
-/*Principal - main*/
-.container {
-    width: 400px;
-    background-color: lavender;
-    color: white;
-    margin: 0 auto;/*Centralização*/
-    border: 5px ridge white;
-
-    /*Tela - / screen {
+/*Reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+  
+ body {
+    background-color: indigo;
     color: whitesmoke;
-    font-size: 40px;
-    font-family: 'Courier New', Courier, monospace;
-    background-color: black;
-    text-align: right;
-    padding: 20px 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
  }
-
+  
+ header {
+    background-color: whitesmoke;
+    color: indigo;
+    text-align: center;
+    width: 100%;
+ }
  
-/*Fileira de Botões calc-button-row {
-    display: flex;
-    align-content: stretch;
-    justify-content: space-between;
-    margin-bottom: 0.5%;
+/*Estilização do Placar*/
+.placar {
+    margin: 20px auto;/*Centralizar a caixa*/
+    border: 3px solid whitesmoke;
+    border-radius: 4px;/*arredondamento das bordas*/
+    text-align: center;
+    width: 200px;
+    font-size: 42px;
+    padding: 15px 20px;
+    position: relative;
  }
- /*Botões* calc-button{
-    background-color: #d8d9db;
-    color: black;
-    height: 100px;
-    flex-basis: 24.5%; /*100% / 4 = 25%*/
-    border: none;
-    border-radius: 2px;
+ .badge {
+    background-color: crimson;
+    font-size: 14px;
+    padding: 2px 15px;
+ }
+ #jogador {
+    position: absolute;
+    top: 30px;
+    left: -40px;
+ }
+ #computador {
+    position: absolute;
+    top: 30px;
+    right: -30px;
+ }
+ /*Resultado do Jogo*/
+.resultado {
     font-size: 40px;
+    font-weight: bold; /*Negrito*/
+    text-align: center;
+}
+
+/*Escolhas*/
+.escolhas {
+    text-align: center;
+    margin-top: 50px;
+ }
+ button.escolha {
+    border: 4px solid whitesmoke;
+    border-radius: 50%; /*Arredondando os botões*/
+    font-size: 42px;
+    padding: 10px;
+    margin: 0 20px;
+    transition: all 0.3s ease;
+ }
+ .escolha:hover {/*Ao passar o mouse por cima*/
+    background-color: darkviolet;
     cursor: pointer;
  }
-
- /*Ao passar o mouse por cima (hover)*/
-.calc-button:hover{background-color:#ebebeb;}
-/*Ao clicar no botão*/
-.calc-button:active{background-color: #bbbcbe;}
-/*Botão que ocupa o espaço de dois*/
-.double{flex-basis: 49.7%} /*2 vezes 25%*/
-/*Botão que ocupa o espaço de três*/
-.triple{flex-basis: 74.8%;} /*3 vezes 25%*/
-  
-/*Ajustes do último botão de cada fileira*/
-.calc-button:last-child{
-    background-color:#e9b9cf;
-    color: white;
+ .escolha:active {/*Ao clicar com o mouse*/
+    background-color: khaki;
  }
- /*Ao passar o mouse por cima - hover*/
- .calc-button:last-child:hover{
-    background-color: #da159e;
+ 
+#jogada {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 20px;
  }
- /*Ao clicar com o mouse - active*/
- .calc-button:last-child:active{
-    background-color:#eeabd8;
- }
- .calc-button-row:last-child{padding-bottom: 0;}
-  
+ 
