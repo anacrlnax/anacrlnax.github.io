@@ -1,81 +1,49 @@
-/*Reset*/
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
- }
-  
- body {
-    background-color: indigo;
-    color: whitesmoke;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
- }
-  
- header {
-    background-color: whitesmoke;
-    color: indigo;
-    text-align: center;
-    width: 100%;
- }
- 
-/*Estilização do Placar*/
-.placar {
-    margin: 20px auto;/*Centralizar a caixa*/
-    border: 3px solid whitesmoke;
-    border-radius: 4px;/*arredondamento das bordas*/
-    text-align: center;
-    width: 200px;
-    font-size: 42px;
-    padding: 15px 20px;
-    position: relative;
- }
- .badge {
-    background-color: crimson;
-    font-size: 14px;
-    padding: 2px 15px;
- }
- #jogador {
-    position: absolute;
-    top: 30px;
-    left: -40px;
- }
- #computador {
-    position: absolute;
-    top: 30px;
-    right: -30px;
- }
- /*Resultado do Jogo*/
-.resultado {
-    font-size: 40px;
-    font-weight: bold; /*Negrito*/
-    text-align: center;
+body { 
+    padding: 15px; 
+    background:#eee; 
+    font-family: Arial,Helvetica, sans-serif 
 }
-
-/*Escolhas*/
-.escolhas {
-    text-align: center;
-    margin-top: 50px;
- }
- button.escolha {
-    border: 4px solid whitesmoke;
-    border-radius: 50%; /*Arredondando os botões*/
-    font-size: 42px;
-    padding: 10px;
-    margin: 0 20px;
-    transition: all 0.3s ease;
- }
- .escolha:hover {/*Ao passar o mouse por cima*/
-    background-color: darkviolet;
-    cursor: pointer;
- }
- .escolha:active {/*Ao clicar com o mouse*/
-    background-color: khaki;
- }
  
-#jogada {
-    text-align: center;
-    font-weight: bold;
-    font-size: 20px;
-    margin-top: 20px;
- }
+.caixa {
+    border: solid 1px #666;
+    padding: 5px 10px;
+    margin: 40px;
+}
  
+.area-visivel span {
+    color: #666655;
+    display: none;
+}
+ 
+@media screen and (max-width: 600px) {
+    .um {
+        background: #F9C;
+    }
+    span.lt600 {
+        display: inline-block;
+    }
+}
+ 
+@media screen and (min-width: 900px) {
+    .dois {
+        background: #F90;
+    }
+    span.gt900 {
+        display: inline-block;
+    }
+}
+ 
+@media screen and (min-width: 600px) and (max-width: 900px) {
+    .tres {
+        background: #9CF;
+    }
+    span.bt600-900 {
+        display: inline-block;
+    }
+}
+ 
+@media screen and (max-device-width: 480px) {
+    .iphone {
+        background: #ccc;
+    }
+}
