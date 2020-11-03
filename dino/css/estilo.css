@@ -1,4 +1,11 @@
 body {
-    background: indigo;
-    color: cyan;
+    background: #fafafa;
+}
+
+.dino {
+    width: 60px;
+    height: 60px;
+    background: darkgreen;
+    position: absolute;
+    bottom: 0;
 }
