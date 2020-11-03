@@ -5,7 +5,17 @@ body {
 .dino {
     width: 60px;
     height: 60px;
-    background: darkgreen;
+    background: url('../img/dino.png');
     position: absolute;
     bottom: 0;
 }
+
+.cacto {
+    width: 60px;
+    height: 60px;
+    background: url('../img/cactus.png');
+    position: absolute;
+    bottom: 0;
+
+}
+

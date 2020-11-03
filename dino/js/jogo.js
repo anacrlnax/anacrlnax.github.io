@@ -42,3 +42,36 @@ function pular(){
     
     },20);
 };
+
+// Criação de Cactos
+const background = document.querySelector('.background');
+
+function criarCacto() {
+    let cactoPosition = 1000;
+    const cacto = document.createElement('div');
+    //Tempo aleatório entre 1s e 6s
+    let tempoRandom = Math.random() * 6000 + 100;
+
+    cacto.classList.add('cacto');
+    cacto.style.left = 1000 + 'px';
+    //Adicionar o cacto na tela
+    background.appendChild(cacto);
+
+    let intervaloEsquerda = setInterval(()=>{
+        
+        if (cactoPosition <= -60) {
+            clearInterval(intervaloEsquerda);
+            //Remover da tela
+            background.removeChild(cacto);
+        } else {
+            cactoPosition -= 10; 
+            cacto.style.left = cactoPosition + 'px';
+        }
+
+    },20);
+
+    let tempoCacto = setTimeout(criarCacto, tempoRandom);
+}
+
+
+criarCacto();
