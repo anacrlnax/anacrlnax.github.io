@@ -1,57 +1,85 @@
 body {
-    font-family: arial;
+   background-color: blueviolet;
+   color: cyan;
 }
-  
-.container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+
+li a { /*Mudar a cor dos links*/
+   color: cyan;
+   text-decoration: none;
 }
-  
-  
-@media (min-width: 768px) {
-    .container {
-      display: grid;
-      grid-template-columns: 200px 1fr 200px;
-      grid-template-rows: auto 1fr auto;
-    }
+li a:hover { /*Ao passar o mouse por cima*/
+   color: yellowgreen;
 }
-  
-header {
-    grid-column: span 3;
-    padding: 30px;
-    text-align: center;
-    font-size: 1.4em;
-    background-color: #369;
-    color: white;
+li a:active { /*Ao clicar com o mouse*/
+   color: yellow;
 }
-  
-main {
-    flex: 1;
-    padding: 20px;
+
+li a, footer h2 a { /*Mudar a cor dos links*/
+   color: cyan;
+   text-decoration: none;
 }
-  
-nav {
-    background-color: #f90;
-    padding: 20px;
+ 
+li a:hover, footer h2 a:hover { /*Ao passar o mouse por cima*/
+   color: yellowgreen;
 }
-   
-aside {
-    padding: 20px;
-    background-color: #936;
+ 
+li a:active, footer h2 a:active { /*Ao clicar com o mouse*/
+   color: yellow;
 }
-  
-footer {
-    grid-column: span 3;
-    padding: 30px;
-    text-align: center;
-    font-size: 1.4em;
-    background-color: #690;
-    color: white;
+
+estilo.css
+footer h2 a {
+   border:2px ridge beige;
+   background-color: bisque;
+   color: brown;
+   padding: 5px;
+   border-radius: 3px;
 }
-  
-h1 {
-    margin-bottom: 1em;
-    font-size: 1.3em;
-    font-weight: bold;
+footer h2 a:hover {
+   border: 2px ridge bisque;
+   background-color: beige;
+   color: brown;
 }
+ 
+footer h2 a:active {
+   background-color: white;
+   box-shadow: 0 0 5px white;
+}
+
+table#tabela01 {
+   border: 3px solid black;
+   border-collapse: collapse; /* Juntar as linhas da borda*/
+   background-color: ivory;
+   color: black;
+}
+#tabela01 td { /*Cada célula da tabela - td - table data*/
+   border: 1px dashed brown; /*Tracejado marrom*/
+   padding: 10px;
+}
+#tabela01 tr:nth-child(even) { /*Fileiras - tr pares com fundo amarelo*/
+   background-color: yellow;
+}
+
+table#tabela02 {
+   background-color: white;
+   padding: 5px;
+   color: black;
+   width: 420px;
+   border-collapse: collapse; /*Junta as linhas*/
+}
+ 
+#tabela02 td, #tabela02 th {
+   border: 1px solid black;
+   text-align: center;
+   height: 30px;
+}
+ 
+#tabela02 th {
+   background-color:cadetblue;
+}
+ 
+#tabela02 tr:nth-child(even) {
+   background-color: aliceblue;
+}
+
+
